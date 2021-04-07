@@ -1,0 +1,13 @@
+@import './components/_header.css';
+@import './screens/_signin.css';
+@import './screens/_cart.css';
+@import './screens/_signup.css';
+@import './screens/_profile.css';
+
+
+table, th, td {
+    border: 1px solid black;
+  }
+input{
+  
+}

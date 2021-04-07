@@ -1,0 +1,26 @@
+#products-shop{
+ display: flex;
+
+
+ flex-wrap: wrap;
+}
+#products-shop >*{
+    margin-top: 20px;
+    width: 30%;
+}
+select {
+    font-size: 20px;
+}
+*{
+    font-size: 20px;
+}
+.rating span {
+    margin: 0.1rem;
+  }
+/*
+  flex:0 0 33.33%;
+style={{display:"flex",marginTop:"40px", flexWrap:"wrap"}}
+*/
+.link{
+    font-size: 40px;
+}

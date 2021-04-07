@@ -1,0 +1,16 @@
+.profile-form >*{
+font-size: 50px;
+
+}
+.profile-form >#email::before{
+    content: "emaiazdfvasfl";
+    background-color: yellow;
+  color: red;
+  font-weight: bold;
+}
+.profile-form{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    sr
+    <script>
+    
+const x= getImages(2,0).then((response)=>
+    response.map((response)=>
+    //console.log(response.image)
+    document.body.appendChild( img_create(response.image,"",""))
+
+   )
+    
+    );
+    function img_create(src, alt, title) {
+    var img = false ? new Image() : document.createElement('img');
+    img.src = src;
+    if ( alt != null ) img.alt = alt;
+    if ( title != null ) img.title = title;
+    return img;
+}
+      async function getImages(limit,pageNumber){
+            return await fetch(`http://localhost:8080/api/products?limit=${limit}&page=${pageNumber}`, {
+                method: 'GET',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json'
+                },
+            })
+                .then(response => {
+                    return response.json();
+                })
+                .catch(err => {
+                    console.log(err);
+                });
+        }
+      
+    </script>
+  
+</body>
+</html>
